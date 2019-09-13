@@ -20,6 +20,5 @@ module Nomster
 
     # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .woff .ttf )
-    config.web_console.whitelisted_ips = '10.0.2.2'
   end
 end
