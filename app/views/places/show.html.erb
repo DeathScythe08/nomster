@@ -31,7 +31,13 @@
   <div id="map"></div>
   <% end %>
   <br/>
-
+<div class="clear"></div>
+<%= simple_form_for @comment, url: '#' do |f| %>
+  <%= f.input :message %>
+  <%= f.input :rating %>
+  <%= f.submit "Add a Comment", class: 'btn btn-dark btn-sm btn-block' %>
+<% end %>
+<br/>
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
     <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-danger btn-sm' %>
