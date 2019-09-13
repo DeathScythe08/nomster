@@ -41,6 +41,18 @@
   </div>
 <br/>
 </div>
+<div class="col-10 offset-1">
+<h1 class="float-left"> Comments </h1>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-success btn-lg float-right" data-toggle="modal" data-target="#myModal">
+  Add a comment
+</button>
+</div>
+
+<br/>
+<div class="clear"></div>
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -57,18 +69,16 @@
           <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
-          <%= f.submit "Add a Comment", class: 'btn btn-dark btn-sm' %>
+          <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Close</button>
+          <%= f.submit "Add a Comment", class: 'btn btn-success btn-sm' %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
-
-<h1>Comments</h1>
-
+<div class="row">
 <% @place.comments.each do |comment| %>
-  <div>
+    <div class="col-12 col-sm-6">
     <blockquote>
       <% if comment.humanized_rating.present? %>
         <b><%= comment.humanized_rating %></b> -
@@ -78,4 +88,6 @@
     </blockquote>
   </div>
 <% end %>
+</div>
 
+<div class="clear"></div>
