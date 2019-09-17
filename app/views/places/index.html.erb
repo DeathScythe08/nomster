@@ -8,9 +8,9 @@
       <small><%= place.user.email %></small>
       <% end %>
 
-    <div class="col-12" class="thepic">
+    <div class="col-12" id="thepic">
   <% if place.photos.last.present? %>
-    <%=image_tag place.photos.last.picture.url %>
+    <%=image_tag place.photos.last.picture.url, width:200, height:200 %>
     <% end %>
   </div>
 

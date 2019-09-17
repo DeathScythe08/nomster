@@ -122,7 +122,7 @@
 <% @place.photos.each do |photo| %>
     <div class="col-12 col-sm-6" id="thepic">
   <% if photo.present? %>
-    <%=image_tag photo.picture.url %>
+    <%=image_tag photo.picture.url, width:250, height:250 %>
     <% end %>
   </div>
 <% end %>          
