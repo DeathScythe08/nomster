@@ -75,3 +75,12 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+
+.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
+  display: block;
+  max-width: 100%;
+  height: 550px;
+  width: 100%;
+  line-height: 1;
+}
+
